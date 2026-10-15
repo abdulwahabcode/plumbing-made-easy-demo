@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Made Easy | Plumber in Denver, NC</title>
+<meta name="description" content="Plumbing Made Easy — repairs, water heaters, drain cleaning and emergency plumbing in Denver, NC. Upfront pricing, fast response.">
+<style>
+:root{
+  --slate:#1C1F24; --slate2:#3A4452; --gray:#9AA3AD; --cream:#F2EEE7;
+  --brass:#C79C5A; --brass-d:#A87F43; --off:#FAF8F4; --ink:#23282E;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--off);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(28,31,36,.97);backdrop-filter:blur(6px)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.1rem}
+.brand{color:var(--off);text-decoration:none;font-weight:800;font-size:1.05rem;letter-spacing:.03em}
+.brand em{font-style:normal;color:var(--brass)}
+.brand small{display:block;font-size:.62rem;font-weight:400;letter-spacing:.28em;color:var(--gray);text-transform:uppercase}
+.links{display:none;gap:1.6rem;list-style:none}
+.links a{color:#D8D3C8;text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.links a:hover{color:var(--brass)}
+.nav-cta{background:var(--brass);color:#1C1F24;text-decoration:none;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;padding:.65rem 1.2rem;border-radius:4px}
+.menu-btn{background:none;border:0;color:var(--off);font-size:1.5rem;cursor:pointer;display:block}
+@media(min-width:860px){.links{display:flex}.menu-btn{display:none}}
+.mobile-menu{display:none;background:#262B32;padding:.3rem 1.1rem .9rem}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:var(--off);text-decoration:none;padding:.65rem 0;border-bottom:1px solid rgba(242,238,231,.12);font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* HERO — split with wrench motif */
+.hero{background:var(--slate);color:var(--off);position:relative;overflow:hidden}
+.hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:4rem 1.2rem;display:grid;gap:2.4rem;grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.hero-inner{grid-template-columns:1.25fr .85fr}}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.74rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:1rem}
+.kicker::before{content:"";width:34px;height:2px;background:var(--brass)}
+.hero h1{font-size:clamp(2.2rem,8vw,3.8rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;margin-bottom:1rem}
+.hero h1 .brass{color:var(--brass)}
+.hero p.lede{max-width:34rem;color:#C6C0B2;font-size:1.02rem;margin-bottom:2rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;text-decoration:none;font-weight:800;letter-spacing:.05em;padding:.95rem 1.9rem;border-radius:4px;font-size:.94rem}
+.btn-brass{background:var(--brass);color:#1C1F24}
+.btn-ghost{border:1.5px solid rgba(242,238,231,.4);color:var(--off)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:2rem;font-size:.84rem;color:#A9A294}
+.hero-badges span{display:flex;align-items:center;gap:.5rem}
+.hero-badges i{font-style:normal;color:var(--brass)}
+/* pipe art card */
+.pipe-card{background:linear-gradient(150deg,#262B32,#14171B);border:1px solid rgba(199,156,90,.35);border-radius:10px;padding:2rem 1.7rem;position:relative;overflow:hidden}
+.pipe-card::after{content:"";position:absolute;top:-40px;right:-40px;width:170px;height:170px;border:22px solid rgba(199,156,90,.22);border-radius:50%}
+.pipe-card h3{color:var(--brass);font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;margin-bottom:1rem}
+.pipe-card ul{list-style:none}
+.pipe-card li{color:var(--off);font-size:1.02rem;font-weight:600;padding:.55rem 0;border-bottom:1px solid rgba(242,238,231,.1);display:flex;justify-content:space-between;gap:.8rem}
+.pipe-card li:last-child{border:0}
+.pipe-card li b{color:var(--brass)}
+
+/* emergency strip */
+.emg{background:var(--brass);color:#1C1F24;padding:.85rem 1.2rem;text-align:center;font-weight:800;letter-spacing:.04em;font-size:.95rem}
+.emg a{color:#1C1F24;font-weight:900}
+
+/* SECTIONS */
+section{padding:3.4rem 1.2rem}
+.wrap{max-width:1120px;margin:0 auto}
+.sec-label{font-size:.74rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-d);margin-bottom:.6rem}
+h2.sec{font-size:clamp(1.75rem,5.5vw,2.5rem);font-weight:800;letter-spacing:-.01em;margin-bottom:.7rem}
+.sec-sub{max-width:42rem;color:#6E747C;margin-bottom:2.2rem}
+
+/* SERVICES — horizontal rows with icon chips */
+.services{background:var(--cream)}
+.svc-list{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:700px){.svc-list{grid-template-columns:1fr 1fr}}
+.svc{display:flex;gap:1.2rem;background:var(--off);border:1px solid #E2DCD0;border-left:4px solid var(--brass);border-radius:6px;padding:1.4rem 1.3rem}
+.svc .chip{flex:none;width:48px;height:48px;border-radius:10px;background:var(--slate);color:var(--brass);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.svc h3{font-size:1.05rem;font-weight:800;margin-bottom:.3rem}
+.svc p{font-size:.91rem;color:#6E747C}
+
+/* WHY — dark slate band, 4 columns */
+.why{background:var(--slate);color:var(--off)}
+.why .sec-label{color:var(--brass)}
+.why h2.sec{color:var(--off)}
+.why .sec-sub{color:#A9A294}
+.why-grid{display:grid;gap:1.2rem;grid-template-columns:1fr;margin-top:2rem}
+@media(min-width:700px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1020px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{background:#262B32;border:1px solid rgba(199,156,90,.28);border-radius:8px;padding:1.7rem 1.4rem}
+.why-card .n{font-size:1.9rem;font-weight:800;color:var(--brass);display:block;margin-bottom:.6rem}
+.why-card h3{font-size:1rem;font-weight:800;margin-bottom:.4rem;color:var(--off)}
+.why-card p{font-size:.89rem;color:#B9B3A6}
+
+/* AREA */
+.area{background:var(--off)}
+.area-grid{display:grid;gap:1.6rem;grid-template-columns:1fr;align-items:center}
+@media(min-width:860px){.area-grid{grid-template-columns:1fr 1.2fr}}
+.map-dots{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.mdot{background:var(--slate);color:var(--off);padding:.85rem;border-radius:6px;font-weight:700;font-size:.92rem;text-align:center}
+.mdot.home{background:var(--brass);color:#1C1F24}
+.area p.note{color:#6E747C;font-size:.93rem;margin-top:1.2rem}
+
+/* CONTACT */
+.contact{background:var(--cream)}
+.contact-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:860px){.contact-grid{grid-template-columns:1fr 1.1fr}}
+.big-phone{background:var(--slate);border-radius:8px;padding:1.8rem;margin-bottom:1.1rem}
+.big-phone h4{font-size:.72rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:.4rem}
+.big-phone a{color:var(--off);text-decoration:none;font-size:1.25rem;font-weight:800}
+.info-line{background:var(--off);border:1px solid #E2DCD0;border-radius:8px;padding:1.1rem 1.3rem;margin-bottom:1.1rem;font-size:.95rem;color:#6E747C}
+.info-line b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-d);margin-bottom:.2rem}
+.info-line a{color:var(--ink);text-decoration:none;font-weight:700}
+form{background:var(--slate);border-radius:8px;padding:1.8rem}
+form h3{color:var(--off);font-size:1.25rem;font-weight:800;margin-bottom:.3rem}
+form p.fsub{color:#A9A294;font-size:.9rem;margin-bottom:1rem}
+label{display:block;font-size:.74rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin:.95rem 0 .35rem}
+label:first-of-type{margin-top:.6rem}
+input,textarea,select{width:100%;max-width:100%;padding:.78rem .9rem;border:1px solid rgba(242,238,231,.25);border-radius:5px;font-size:1rem;font-family:var(--sans);background:#14171B;color:var(--off)}
+textarea{min-height:105px;resize:vertical}
+button.submit{margin-top:1.2rem;width:100%;background:var(--brass);color:#1C1F24;border:0;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:1rem;font-size:.94rem;border-radius:5px;cursor:pointer}
+button.submit:hover{background:var(--brass-d)}
+footer{background:var(--slate);color:#8E97A1;padding:1.6rem 1.2rem;text-align:center;font-size:.82rem;border-top:1px solid rgba(199,156,90,.3)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Plumbing <em>Made Easy</em><small>Denver · North Carolina</small></a>
+    <ul class="links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Free Quote</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#area">Service Area</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">Plumber · Denver, NC</span>
+      <h1>Plumbing problems? <span class="brass">Consider it handled.</span></h1>
+      <p class="lede">Plumbing Made Easy delivers honest, upfront plumbing for Denver-area homes — repairs done right, prices agreed before we start, and no mess left behind.</p>
+      <div class="cta-row">
+        <a class="btn btn-brass" href="#contact">Get a Free Quote</a>
+        <a class="btn btn-ghost" href="mailto:plumbingmadeeasy21@gmail.com">Email Us</a>
+      </div>
+      <div class="hero-badges">
+        <span><i>✓</i> Upfront pricing</span>
+        <span><i>✓</i> Licensed &amp; insured</span>
+        <span><i>✓</i> Same-day service</span>
+      </div>
+    </div>
+    <div class="pipe-card">
+      <h3>Most called for</h3>
+      <ul>
+        <li>Leak repairs <b>✓</b></li>
+        <li>Water heaters <b>✓</b></li>
+        <li>Drain cleaning <b>✓</b></li>
+        <li>Fixture installs <b>✓</b></li>
+        <li>Emergency calls <b>✓</b></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="emg">💧 Burst pipe or major leak? Email us right away — <a href="mailto:plumbingmadeeasy21@gmail.com">plumbingmadeeasy21@gmail.com</a> — we respond fast.</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-label reveal">What we fix</div>
+    <h2 class="sec reveal">Plumbing Services</h2>
+    <p class="sec-sub reveal">From a dripping faucet to a full water heater replacement — one call, and it's done properly.</p>
+    <div class="svc-list">
+      <div class="svc reveal"><div class="chip">🔧</div><div><h3>Leak &amp; Pipe Repair</h3><p>Pinhole leaks, burst pipes, and corroded lines — found fast and repaired to last, with drywall-friendly work practices.</p></div></div>
+      <div class="svc reveal"><div class="chip">🚿</div><div><h3>Water Heater Install &amp; Repair</h3><p>Tank and tankless units: diagnosis, repair, and full replacement sized right for your home and hot-water needs.</p></div></div>
+      <div class="svc reveal"><div class="chip">🌀</div><div><h3>Drain Cleaning</h3><p>Stubborn clogs cleared safely — kitchen lines, bathroom drains, and main sewer backups, without harsh chemicals.</p></div></div>
+      <div class="svc reveal"><div class="chip">🚽</div><div><h3>Toilet Repair &amp; Replacement</h3><p>Running toilets, weak flushes, and rocking bowls fixed — or a new water-efficient toilet installed the same day.</p></div></div>
+      <div class="svc reveal"><div class="chip">🚰</div><div><h3>Faucet &amp; Fixture Installation</h3><p>New faucets, showerheads, garbage disposals, and valves — quality fixtures installed cleanly and tested before we leave.</p></div></div>
+      <div class="svc reveal"><div class="chip">⚠️</div><div><h3>Emergency Plumbing</h3><p>Major leaks, flooding, and no-water situations can't wait. Priority response when your home needs it most.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-label reveal">Why Plumbing Made Easy</div>
+    <h2 class="sec reveal">Honest work, fair price</h2>
+    <p class="sec-sub reveal">Plumbing is stressful enough. We keep it simple: clear pricing, clean work, and a plumber who explains everything.</p>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="n">01</span><h3>Upfront, flat pricing</h3><p>You approve the price before any wrench turns. No hourly surprises, no mystery fees.</p></div>
+      <div class="why-card reveal"><span class="n">02</span><h3>Licensed &amp; insured</h3><p>Qualified work that meets code — your home and your family protected on every job.</p></div>
+      <div class="why-card reveal"><span class="n">03</span><h3>Fast local response</h3><p>Based in Denver, NC — we reach Lincoln County homes quickly, often the same day.</p></div>
+      <div class="why-card reveal"><span class="n">04</span><h3>Clean &amp; respectful</h3><p>Shoe covers, drop cloths, and a full tidy-up. Your home looks the same when we leave — minus the leak.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="area-grid">
+      <div>
+        <div class="sec-label reveal">Where we work</div>
+        <h2 class="sec reveal">Service Area</h2>
+        <p class="sec-sub reveal">Proudly serving Denver and the Lake Norman region.</p>
+      </div>
+      <div class="map-dots reveal">
+        <div class="mdot home">Denver</div><div class="mdot">Lincolnton</div><div class="mdot">Huntersville</div><div class="mdot">Mooresville</div><div class="mdot">Stanley</div><div class="mdot">Charlotte</div><div class="mdot">Hickory</div><div class="mdot">Iron Station</div>
+      </div>
+    </div>
+    <p class="note reveal">Not sure if you're in range? Send us a message — if we can get there, we'll take the job.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-label reveal">Get in touch</div>
+    <h2 class="sec reveal">Request Your Free Quote</h2>
+    <p class="sec-sub reveal">Describe the problem — photos help. We usually reply within one business day.</p>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="big-phone"><h4>Fastest response</h4><a href="mailto:plumbingmadeeasy21@gmail.com">plumbingmadeeasy21@gmail.com</a></div>
+        <div class="info-line"><b>Based in</b>Denver, North Carolina</div>
+        <div class="info-line"><b>Hours</b>Monday – Friday · 8:00 AM – 6:00 PM<br>Saturday · 9:00 AM – 3:00 PM · Emergencies anytime</div>
+      </div>
+      <form class="reveal" onsubmit="return sendQuote(this)">
+        <h3>Free Quote Request</h3>
+        <p class="fsub">No obligation — just an honest price for your job.</p>
+        <label for="n4">Your name</label><input id="n4" name="name" required>
+        <label for="p4">Phone</label><input id="p4" name="phone" type="tel">
+        <label for="s4">Service needed</label>
+        <select id="s4" name="service"><option>Leak / Pipe Repair</option><option>Water Heater Install or Repair</option><option>Drain Cleaning</option><option>Toilet Repair / Replacement</option><option>Faucet / Fixture Installation</option><option>Emergency Plumbing</option></select>
+        <label for="m4">Describe the problem</label><textarea id="m4" name="message" placeholder="e.g. Water heater is leaking from the bottom, about 8 years old…"></textarea>
+        <button class="submit" type="submit">Send Quote Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Plumbing Made Easy · Denver, NC &nbsp;·&nbsp; Demo by Wahab Codes</footer>
+
+<script>
+function sendQuote(f){
+  var body='Name: '+f.name.value+'%0D%0APhone: '+f.phone.value+'%0D%0AService: '+f.service.value+'%0D%0ADetails: '+encodeURIComponent(f.message.value);
+  window.location.href='mailto:plumbingmadeeasy21@gmail.com?subject=Free Quote Request — '+encodeURIComponent(f.service.value)+'&body='+body;
+  return false;
+}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
